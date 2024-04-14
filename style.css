@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: rgb(111, 40, 244);
+}
+
+.app{
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;    
+    padding: 30px;
+}
+
+.app h1{
+    font-size: 25px;
+    color: rgb(111, 40, 244);
+    font-weight: 600;
+    border-bottom: 1px solid rgb(111, 40, 244);
+    padding-bottom: 30px;
+
+}
+
+.quiz{
+    padding: 20px 0;
+}
+
+.quiz h2{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(40, 135, 244);
+}
+
+.btn{
+    background: white;
+    color: rgb(8, 57, 114);
+    width: 100%;
+    font-weight: 700;
+    border: 1px solid rgb(111, 40, 244);
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.3s all;
+}
+
+.btn:hover{
+    background: rgb(111, 40, 244);
+    color: white;
+}

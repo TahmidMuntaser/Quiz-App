@@ -1,7 +1,7 @@
 const questions = [
     {
         question: "What does the abbreviation HTML stand for?",
-        answer: [
+        answers: [
             { text: "HighTech Markup Language", correct: false },
             { text: "HyperText Machine Language", correct: false },
             { text: "HyperText Markup Language", correct: true },
@@ -12,7 +12,7 @@ const questions = [
 
     {
         question: "How many sizes of headers are available in HTML by default?",
-        answer: [
+        answers: [
             { text: "2", correct: false },
             { text: "4", correct: false },
             { text: "5", correct: false },
@@ -23,7 +23,7 @@ const questions = [
 
     {
         question: "How to create an ordered list in HTML?",
-        answer: [
+        answers: [
             { text: "<ul>", correct: false },
             { text: "<ol>", correct: true },
             { text: "<li>", correct: false },
@@ -34,7 +34,7 @@ const questions = [
 
     {
         question: "We enclose HTML tags within?",
-        answer: [
+        answers: [
             { text: "<>", correct: true },
             { text: "/", correct: false },
             { text: "{}", correct: false },
@@ -45,7 +45,7 @@ const questions = [
 
     {
         question: "Which of the following is correct about HTML?",
-        answer: [
+        answers: [
             { text: "HTML uses user-defined Tags", correct: false },
             { text: "HTML uses tags defined within the language", correct: true },
             { text: "Both A and B", correct: false },
@@ -57,4 +57,34 @@ const questions = [
 
 ];
 
+const questionElement = document.getElementById("question");
+const answerButton = document.getElementById("answerbtn");
+const nextButton = document.getElementById("nxtbtn");
+
+let ind = 0;
+let score = 0;
+
+function startQuiz(){
+    ind = 0;
+    score = 0;
+    nextButton.innerHTML = 'Next';
+    showQuestion();
+}
+
+function showQuestion(){
+    let currQues = questions[ind];
+    let QuesNo = ind+1;
+    questionElement.innerHTML = QuesNo + ". " + currQues.question;
+    
+    currQues.answers.forEach(answer=>{
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButton.appendChild(button);
+    });
+}
+
+
+
+startQuiz();
 

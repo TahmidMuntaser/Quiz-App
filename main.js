@@ -106,6 +106,7 @@ function selectAnswer(e){
 
     if(isCorrect){
         selectBtn.classList.add("correct");
+        score++;
     }
     else{
         selectBtn.classList.add("wrong");   
@@ -120,6 +121,19 @@ function selectAnswer(e){
 
     nextButton.style.display = "block"; 
 }
+
+
+
+
+nextButton.addEventListener("click", ()=>{
+    if(ind<questions.length){
+        handleNxtBtn();
+    }
+    else{
+        startQuiz();
+    }
+
+});
 
 startQuiz();
 

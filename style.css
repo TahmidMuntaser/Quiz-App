@@ -52,9 +52,13 @@ body{
     border-radius: 10px;
 }
 
-.btn:hover{
+.btn:hover:not([disabled]){
     background: rgb(75, 8, 199);
     color: white;
+}
+
+.btn:disabled{
+    cursor: no-drop;
 }
 
 .btn:active{

@@ -34,7 +34,7 @@ body{
 .quiz h2{
     font-size: 18px;
     font-weight: 600;
-    color: rgb(40, 135, 244);
+    color: rgb(8, 57, 114);;
 }
 
 .btn{
@@ -53,4 +53,29 @@ body{
 .btn:hover{
     background: rgb(111, 40, 244);
     color: white;
+}
+
+.btn:active{
+    background: rgb(50, 7, 130);
+}
+
+#nxtbtn{
+    background: rgb(111, 40, 244);
+    color:white;
+    width: 150px;
+    padding: 10px;
+    border: 0;
+    margin: 20px auto 0;
+    font-weight: 500;
+    border-radius: 4px;
+    display: none;
+    cursor: pointer;
+}
+
+#nxtbtn:hover{
+    background: rgb(50, 7, 130);
+}
+
+#nxtbtn:active{
+    background: rgb(111, 40, 244);
 }

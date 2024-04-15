@@ -72,6 +72,7 @@ function startQuiz(){
 }
 
 function showQuestion(){
+    resetState();
     let currQues = questions[ind];
     let QuesNo = ind+1;
     questionElement.innerHTML = QuesNo + ". " + currQues.question;
@@ -85,6 +86,13 @@ function showQuestion(){
 }
 
 
+
+function resetState(){
+    nextButton.style.display = "none";
+    while(answerButton.firstChild){
+        answerButton.removeChild(answerButton.firstChild);
+    }
+}
 
 startQuiz();
 

@@ -68,7 +68,7 @@ body{
     margin: 20px auto 0;
     font-weight: 500;
     border-radius: 4px;
-    display: none;
+    display: block;
     cursor: pointer;
 }
 

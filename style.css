@@ -96,3 +96,11 @@ body{
     background-color: #ff9393;
     border: none;
 }
+
+
+#timer{
+    color: rgb(50, 7, 130);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}

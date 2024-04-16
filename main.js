@@ -76,10 +76,37 @@ function startQuiz(){
     ind = 0;
     score = 0;
     nextButton.innerHTML = 'Next';
+    document.getElementById('timer').style.display = '';
     showQuestion();
 }
 
+//Timer 
+
+let timerId;
+let timeLeft = 30;
+
+function startTimer(){
+    timeLeft = 30;
+    timerId = setInterval(()=>{
+        timeLeft--;
+
+        document.getElementById('timer').innerText = `Time left: ${timeLeft}s`;
+
+        if(timeLeft<=0){
+            clearInterval(timerId);
+            handleNxtBtn();
+        }
+    }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timerId);
+}
+
+
 function showQuestion(){
+    stopTimer();
+    startTimer();
     resetState();
     let currQues = questions[ind];
     let QuesNo = ind+1;
@@ -131,6 +158,8 @@ function selectAnswer(e){
 }
 
 function showScore(){
+    stopTimer(); 
+    document.getElementById('timer').style.display = 'none';
     resetState();
     questionElement.innerHTML = "Your Score is: " + score + " out of " + questions.length;
     nextButton.innerHTML = 'Restart';
@@ -140,6 +169,7 @@ function showScore(){
 function handleNxtBtn() {
     ind++;
     if(ind<questions.length){
+        document.getElementById('timer').style.display = '';
         showQuestion();
     }
     else{

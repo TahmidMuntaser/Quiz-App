@@ -104,3 +104,29 @@ body{
     font-weight: 500;
     margin-bottom: 15px;
 }
+
+#startButton{
+    background: rgb(111, 40, 244);
+    color:white;
+    width: 150px;
+    padding: 10px;
+    border: 0;
+    margin: 20px auto 0;
+    font-weight: 500;
+    border-radius: 4px;
+    display: block;
+    cursor: pointer;
+}
+
+#startButton:hover{
+    background: rgb(50, 7, 130);
+}
+
+#startButton:active{
+    background: rgb(111, 40, 244);
+}
+
+#instructionPage p{
+   color: rgb(8, 57, 114);
+   margin: 18px 0;
+}

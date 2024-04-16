@@ -56,6 +56,8 @@ const questions = [
 
 ];
 
+// Fisher-Yates (also known as Knuth) shuffle algorithm
+
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -189,5 +191,16 @@ nextButton.addEventListener("click", ()=>{
 
 });
 
-startQuiz();
+document.getElementById('startButton').addEventListener('click', function() {
+ 
+    document.getElementById('instructionPage').style.display = 'none';
+
+    
+    document.getElementById('quizPage').style.display = '';
+
+    
+    startQuiz();
+});
+
+// startQuiz();
 

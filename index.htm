@@ -8,20 +8,36 @@
 </head>
 <body>
     <div class="app">
-        <h1>Quiz</h1>
-        <div class="quiz"> 
-            
-            <div id="timer">Time left: 30s</div> 
-            <h2 id="question">Question goes here</h2>
-           
-            <div id="answerbtn">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
-            </div>
 
-            <button id="nxtbtn">Next</button>
+        <div id="instructionPage">
+            <h1>Quiz Instructions</h1>
+            <p>Here are some instructions for the quiz...</p>
+            <ul>
+                <li>Each question has four possible answers.</li>
+                <li>Select the answer you think is correct by clicking on it.</li>
+                <li>You have 30 seconds to answer each question.</li>
+                <li>If you don't answer a question within the time limit, the quiz will automatically proceed to the next question.</li>
+                <li>Your score will be displayed at the end of the quiz.</li>
+            </ul>
+            <button id="startButton">Start Quiz</button>
+        </div>
+
+        <div id="quizPage" style="display: none;">
+            <h1>Quiz</h1>
+            <div class="quiz"> 
+                
+                <div id="timer">Time left: 30s</div> 
+                <h2 id="question">Question goes here</h2>
+            
+                <div id="answerbtn">
+                    <button class="btn">Answer 1</button>
+                    <button class="btn">Answer 2</button>
+                    <button class="btn">Answer 3</button>
+                    <button class="btn">Answer 4</button>
+                </div>
+
+                <button id="nxtbtn">Next</button>
+            </div>
         </div>
     </div>
 

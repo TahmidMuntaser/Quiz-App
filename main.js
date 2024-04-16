@@ -29,7 +29,6 @@ const questions = [
             { text: "<li>", correct: false },
             { text: "<href>", correct: false }
         ]
-
     },
 
     {
@@ -49,7 +48,7 @@ const questions = [
             { text: "HTML uses user-defined Tags", correct: false },
             { text: "HTML uses tags defined within the language", correct: true },
             { text: "Both A and B", correct: false },
-            { text: "None of theseg", correct: false }
+            { text: "None of these", correct: false }
         ]
 
     },
@@ -79,7 +78,7 @@ function showQuestion(){
     
     currQues.answers.forEach(answer=>{
         const button = document.createElement("button");
-        button.innerHTML = answer.text;
+        button.innerText = answer.text;
         button.classList.add("btn");
         answerButton.appendChild(button);
 
@@ -122,6 +121,22 @@ function selectAnswer(e){
     nextButton.style.display = "block"; 
 }
 
+function showScore(){
+    resetState();
+    questionElement.innerHTML = "Your Score is: " + score + " out of " + questions.length;
+    nextButton.innerHTML = 'Restart';
+    nextButton.style.display = "block";
+}
+
+function handleNxtBtn() {
+    ind++;
+    if(ind<questions.length){
+        showQuestion();
+    }
+    else{
+        showScore();
+    }
+}
 
 
 

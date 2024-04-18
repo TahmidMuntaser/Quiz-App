@@ -53,6 +53,61 @@ const questions = [
 
     },
 
+    {
+        question: "Which of the following tag is used to make the underlined text?",
+        answers: [
+            { text: "<i>", correct: false },
+            { text: "<ul>", correct: true },
+            { text: "<u>", correct: false },
+            { text: "<pre>", correct: false }
+        ]
+
+    },
+
+    {
+        question: "Which of the following tag is used to define options in a drop-down selection list?",
+        answers: [
+            { text: "<select>", correct: false },
+            { text: "<list>", correct: false },
+            { text: "<dropdown>", correct: false },
+            { text: "<option>", correct: true }
+        ]
+
+    },
+
+    {
+        question: "Which of the following tag is used to add rows in the table?",
+        answers: [
+            { text: "<td> and </td>", correct: false },
+            { text: "<th> and </th>", correct: false },
+            { text: "<tr> and </tr>", correct: true },
+            { text: "None of these", correct: false }
+        ]
+
+    },
+
+    {
+        question: "Which of the following attribute is used to provide a unique name to an element?",
+        answers: [
+            { text: "class", correct: false },
+            { text: "id", correct: true },
+            { text: "type", correct: false },
+            { text: "None of these", correct: false }
+        ]
+
+    },
+
+    {
+        question: "Which of the following HTML tag is the special formatting tag?",
+        answers: [
+            { text: "<p>", correct: false },
+            { text: "<b>", correct: false },
+            { text: "<pre>", correct: true },
+            { text: "None of these", correct: false }
+        ]
+
+    },
+
 
 ];
 

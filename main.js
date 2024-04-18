@@ -193,6 +193,7 @@ nextButton.addEventListener("click", ()=>{
 
 document.getElementById('startButton').addEventListener('click', function() {
  
+    
     document.getElementById('instructionPage').style.display = 'none';
 
     

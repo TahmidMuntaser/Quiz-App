@@ -67,6 +67,11 @@ function shuffle(array) {
 
 shuffle(questions);
 
+// Shuffle the answers for each question
+questions.forEach(question => {
+    shuffle(question.answers);
+});
+
 const questionElement = document.getElementById("question");
 const answerButton = document.getElementById("answerbtn");
 const nextButton = document.getElementById("nxtbtn");
